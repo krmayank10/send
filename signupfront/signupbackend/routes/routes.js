@@ -17,7 +17,8 @@ router.post('/signup', async (request, response) => {
     })
     signedUpUser.save()
         .then(data => {
-            response.json(data)
+            // response.json(data)
+            response.send('home.ejs')
         })
         .catch(error => {
             response.json(error)
